@@ -157,7 +157,7 @@ export class Game {
     const maxIdx = ghostSizes.length - 1;
 
     // points: smaller is higher
-    const points = [10, 20, 40, 80][g.sizeIdx] ?? 10;
+    const points = [10, 20, 40][g.sizeIdx] ?? 10;
     this.score += points;
     this.ui.score.textContent = String(this.score);
 

@@ -78,6 +78,6 @@ export async function loadAssets() {
     arrow,
     icon,
     // sizes for gameplay
-    ghostSizes: [78, 56, 40, 30], // big -> smallest
+    ghostSizes: [78, 56, 40], // big -> smallest (1→2→4)
   };
 }
