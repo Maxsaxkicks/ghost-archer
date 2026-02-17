@@ -282,11 +282,15 @@ export class Game {
     ctx.lineTo(w, h - 150*dpr);
     ctx.stroke();
 
-    // bow
+    // bow (rotate to horizontal)
     const bow = this.assets.bow;
-    const bowW = 86*dpr;
-    const bowH = 140*dpr;
-    ctx.drawImage(bow, this.player.x - bowW*0.5, this.player.y - bowH*0.5, bowW, bowH);
+    const bowW = 140*dpr;
+    const bowH = 86*dpr;
+    ctx.save();
+    ctx.translate(this.player.x, this.player.y);
+    ctx.rotate(-Math.PI / 2);
+    ctx.drawImage(bow, -bowW*0.5, -bowH*0.5, bowW, bowH);
+    ctx.restore();
 
     // arrows
     const arrowImg = this.assets.arrow;
